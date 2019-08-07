@@ -9,6 +9,9 @@
     "heroku-postbuild": "cd npm install --only=dev && npm install && npm run build"
     
   },
+  "engines": {
+    "node": "10.16.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a-sanderson/skate-app.git"
