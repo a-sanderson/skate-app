@@ -27,6 +27,7 @@ app.use("/api", expressJwt({secret: process.env.SECRET})) // creates req.user
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/users", require("./routes/userRouter.js"))
 app.use("/videos", require("./routes/videoRouter.js"))
+app.use("/spots", require("./routes/spotRouter.js"))
 
 app.use((err, req, res, next) => {
     console.error(err)
