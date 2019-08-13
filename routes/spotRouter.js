@@ -14,4 +14,15 @@ spotRouter.post("/", (req, res, next) => {
     })
 })
 
+spotRouter.get("/", (req,res,next) => {
+    Spot.find((err, spots) =>{
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(201).send(spots)
+    })
+    
+})
+
 module.exports = spotRouter

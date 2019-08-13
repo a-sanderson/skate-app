@@ -10,6 +10,10 @@ const spotSchema = new Schema ({
         type: String,
         required: true 
     },
+    coordinate:{
+        type: Object,
+        required: true
+    },
     description:{
         type: String,
         required: true
