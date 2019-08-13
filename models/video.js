@@ -6,10 +6,7 @@ const videoSchema = new Schema ({
         type: String,
         required: true
     },
-    location: {
-        type: String
-    },
-    name: {
+    trick: {
         type:String,
         required: true
     },
@@ -20,6 +17,10 @@ const videoSchema = new Schema ({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User"
+    },
+    spot: {
+        type: Schema.Types.ObjectId,
+        ref: "Spot"
     }
 })
 

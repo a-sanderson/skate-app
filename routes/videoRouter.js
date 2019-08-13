@@ -29,5 +29,18 @@ videoRouter.get("/trending", async (req,res, next) => {
      })
  })
 
+ videoRouter.get("/:spot", async (req, res, next) => {
+    
+    try {
+        const videos = await Video.find({ spot: req.params.spot})
+        return res.status(200).send(videos)
+    }
+    catch(err){
+        res.status(500)
+        return next(err)
+    }
+ 
+ })
+
 
  module.exports = videoRouter
