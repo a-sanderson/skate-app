@@ -42,5 +42,20 @@ videoRouter.get("/trending", async (req,res, next) => {
  
  })
 
+ videoRouter.put(`/:_id`, (req, res, next) => {
+    Video.findOneAndUpdate(
+        {_id: req.params._id}, 
+        {$inc:{votes: 1 }},
+        {new: true},
+        (err, updatedVideo) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedVideo)
+        }
+    )
+})
+
 
  module.exports = videoRouter
