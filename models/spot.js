@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const spotSchema = new Schema ({
     identifier: {
         type: String,
-        required: true
+        
     },
     name: {
         type: String,
@@ -16,7 +16,7 @@ const spotSchema = new Schema ({
     },
     description:{
         type: String,
-        required: true
+        
     }
 })
 
